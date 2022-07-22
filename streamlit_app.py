@@ -1,3 +1,3 @@
 import streamlit
 
-streamlit.title('wtf!)
+streamlit.title('wtf!')
