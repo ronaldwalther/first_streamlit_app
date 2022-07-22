@@ -20,3 +20,4 @@ fruits_to_show = myfruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 
 
+
