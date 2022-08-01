@@ -33,9 +33,9 @@ streamlit.header("Fruityvice Fruit Advice!")
 
 ##streamlit.write('The user entered ', fruit_choice)
 def get_fruityvice_data(this_fuit_choice):
-   fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
-   fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-   return fruityvice_normalized
+     fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
+     fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+     return fruityvice_normalized
   
 try: 
   fruit_choice = streamlit.text_input('What fruit would you like information about?')
@@ -58,9 +58,9 @@ def get_fruit_load_list():
   
 # add a button
 if streamlit.button('Get fruit load list'):
-  my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-  my_data_rows = get_fruit_load_list
-  streamlit.dataframe(my_data_rows)  
+    my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+    my_data_rows = get_fruit_load_list
+    streamlit.dataframe(my_data_rows)  
 
 add_my_fruit = streamlit.text_input('What fruit would you add?','Jackfruit')
 
